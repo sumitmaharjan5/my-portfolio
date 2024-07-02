@@ -1,0 +1,273 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #555;
+}
+
+/* //////////////////
+ Reusable::
+///////////////////*/
+
+.container {
+  max-width: 940px;
+  /* padding: 24px 50px 96px 50px; */
+  padding-top: 120px;
+  padding-bottom: 120px;
+  margin: 0 auto;
+  /* background-color: #777; */
+}
+
+.primary-heading {
+  font-size: 32px;
+  color: #000;
+}
+
+/* //////////////////
+ end of Reusable::
+///////////////////*/
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 9px 20px rgba(0, 0, 0, 0.05);
+  /* border-bottom: 2px solid #fff; */
+}
+.logo {
+  width: 180px;
+}
+
+.main-nav-list {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  margin-right: 10px;
+}
+.main-nav-link {
+  position: relative;
+  padding: 33px 0px;
+}
+.main-nav-link::after {
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: "";
+  border-bottom: 2px solid #000;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.main-nav-link:link,
+.main-nav-link:visited {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #333;
+  transition: all 0.3s;
+  /* padding-top: 10rem;
+    padding-bottom:10rem ; */
+}
+
+.main-nav-link:not(.nav-cta):hover::after,
+.main-nav-link:not(.nav-cta):active::after {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.main-nav-link.nav-cta:link,
+.main-nav-link .nav-cta:visited {
+  padding: 1.2rem 2.4rem;
+  background-color: #fff;
+  border-radius: 9px;
+  font-weight: 800;
+  border: 1px solid #dfdfdf;
+  color: #000;
+  /* transition: all 0.3s; */
+}
+
+.main-nav-link.nav-cta:hover,
+.main-nav-link .nav-cta:active {
+  background-color: #000;
+  color: #fff;
+  box-shadow: 0 9px 20px rgba(0, 0, 0, 0.28);
+}
+
+/* ////////////////////
+Hero section
+//////////////////// */
+
+.section-hero {
+  padding: 24px 0 96px 0;
+}
+
+.hero {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-txt {
+  justify-self: end;
+}
+
+.hero-txt h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.hero-txt h2 {
+  font-size: 42px;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+.hero-txt p {
+  font-size: 18px;
+  /* font-weight: 500; */
+  color: #777;
+  margin-bottom: 24px;
+}
+
+.hero-img {
+  max-width: 100%;
+}
+.btn {
+  display: inline-block;
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 1.2rem 2.4rem;
+  border: 1px solid #777;
+  border-radius: 9px;
+  margin-bottom: 15px;
+}
+
+.btn-getstarted:link,
+.btn-getstarted:visited {
+  background-color: #000;
+  color: #fff;
+  margin-right: 14px;
+}
+
+.btn-getstarted:hover,
+.btn-getstarted:active {
+  background-color: #fff;
+  color: #000;
+  box-shadow: 0 9px 20px rgba(0, 0, 0, 0.141);
+}
+
+.btn-contact:link,
+.btn-contact:visited {
+  background-color: #fff;
+  color: #000;
+}
+
+.btn-contact:hover,
+.btn-contact:active {
+  background-color: #000;
+  color: #fff;
+  box-shadow: 0 9px 20px rgba(0, 0, 0, 0.2);
+}
+/* ********************** */
+/* Section 2 start */
+/* ********************** */
+.section-2 {
+  background-color: #f7f7fa;
+}
+
+.forflex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* text-align: center; */
+}
+
+.description {
+  font-size: 12px;
+  max-width: 649px;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  line-height: 200%;
+}
+
+/* ********************** */
+/* Section 3 start */
+/* ********************** */
+.container-2 {
+  max-width: 800px;
+  padding-top: 70px;
+  padding-bottom: 30px;
+  margin: 0 auto;
+}
+
+.section-3-title {
+  padding-top: 100px;
+  text-align: center;
+}
+
+.my-work-container {
+  background-color: #f7f7f7;
+  padding: 20px 40px 20px 40px;
+  border-radius: 9px;
+  margin-bottom: 40px;
+}
+.my-work-title {
+  text-align: center;
+  font-size: 20px;
+  color: #333;
+  margin-bottom: 20px;
+}
+.img-text {
+  display: flex;
+  align-items: center;
+  /* gap: 30px; */
+}
+.my-work-container img {
+  height: 180px;
+  width: 320px;
+  align-self: end;
+}
+
+.img-text .my-work-txt {
+  font-size: 12px;
+  max-width: 649px;
+  text-align: center;
+  /* padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left:10px ;
+  padding-right:10px ; */
+  padding: 10px 20px 10px 20px;
+  line-height: 200%;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 30px;
+  background: black;
+  color: white;
+}
+/* responsive*/
